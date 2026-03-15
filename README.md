@@ -70,8 +70,20 @@ mvn test -Dtest=DataAnalysisTest
 Yapılandırma
 src/main/resources/config.properties dosyasını düzenleyerek tarayıcıyı veya bekleme sürelerini değiştirebilirsiniz:
 
+firefox için bu şekilde çalıştırabilirsiniz : mvn test -Dbrowser=firefox
+chrome için bu şekilde çalıştırabilirsiniz  : mvn test -Dbrowser=chrome
+
+
 browser=chrome
 url=https://www.enuygun.com/
 implicitWait=10
 explicitWait=15
 headless=false
+
+browser=firefox
+url=https://www.enuygun.com/
+implicitWait=10
+explicitWait=15
+headless=false
+
+
