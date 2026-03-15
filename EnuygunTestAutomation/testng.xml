@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Enuygun Test Paketi" verbose="1">
+    <listeners>
+        <listener class-name="Listeners.TestListener"/>
+    </listeners>
+    
+    <!-- Senaryo 1: Kalkış Saati Filtresi -->
+    <test name="Senaryo 1: Zaman Filtresi Testi">
+        <classes>
+            <class name="Tests.FlightSearchTest">
+                <methods>
+                    <include name="testFlightSearchWithTimeFilter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- Senaryo 2: Havayolu ve Fiyat Sıralaması -->
+    <test name="Senaryo 2: Havayolu ve Fiyat Sıralama Testi">
+        <classes>
+            <class name="Tests.FlightSearchTest">
+                <methods>
+                    <include name="testTurkishAirlinesPriceSorting"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- Senaryo 3: Kritik Kullanıcı Yolu -->
+    <test name="Senaryo 3: Kritik Yol Testi">
+        <classes>
+            <class name="Tests.FlightSearchTest">
+                <methods>
+                    <include name="testCriticalUserPath"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Senaryo 4: Veri Analizi -->
+    <test name="Senaryo 4: Veri Analizi ve Görselleştirme Testi">
+        <classes>
+            <class name="Tests.DataAnalysisTest"/>
+        </classes>
+    </test>
+</suite>
